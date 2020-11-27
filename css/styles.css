@@ -71,6 +71,7 @@ button:hover, button:focus{
     position: absolute;
     bottom: 0;
     width: 100%;
+    margin-top: 50px;
     /* margin-bottom: 10px; */
 }
 .profile__portrait {
@@ -137,7 +138,7 @@ width: 20px;
 .page-content{
     margin-left: 30px;
     margin-right: 30px;
-    padding-bottom: 1.5rem;
+    padding-bottom: 5rem;
     /* max-width: 700px;
     margin: 0 auto; */
 }
