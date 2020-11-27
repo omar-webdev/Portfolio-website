@@ -11,23 +11,35 @@ text color : #605f5f
 background color : #C6EBFF
 other color: #000
 */
+:root {
+    --primary-color: #605f5f ;
+    --secondary-color: #000;
+    --background-color: #C6EBFF ;
+    --anchor-color: #357b70;
+    --grid-background-color:lightgray;
+    --primary-font-family: 'lato';
+    --secondary-font-family: 'roboto';
+    --font-weight: 400;
+  }
 
 body{
     background-color: #C6EBFF;
-    font-family: 'lato', sans-serif;
+    font-family: var(--primary-font-family), sans-serif;
     font-weight: 400;
+    position: relative;
+    min-height: 100vh;
 }
 
 h1, h2{
     color: #888;
 }
 p{
-    font-family: 'roboto' , sans-serif;
+    font-family: var(--secondary-font-family) , sans-serif;
     font-weight: 400;
-    color: #605f5f;
+    color: var(--primary-color);
 }
 a{
-    color: #357b70;
+    color: var(--anchor-color);
     text-decoration: none;
 }
 a:visited {
@@ -46,8 +58,8 @@ a:active {
     color: #489c79;
 }
 button{
-    font-family: 'roboto';
-    background-color:#605f5f;
+    font-family: var(--secondary-font-family);
+    background-color:var(--primary-color);
     text-decoration: none;
     color: white;
     border-radius: 3px;
@@ -132,7 +144,7 @@ width: 20px;
         margin: 0;
     }
   .grid__item {
-    background-color: lightgray;
+    background-color: var(--grid-background-color);
     padding: 10px;
     margin: 0;
     width: auto;
@@ -141,6 +153,7 @@ width: 20px;
 .page-content{
     margin-left: 30px;
     margin-right: 30px;
+    padding-bottom: 1.5rem;
     /* max-width: 700px;
     margin: 0 auto; */
 }
@@ -253,19 +266,19 @@ width: 20px;
   }
   /* media queries */
 @media all and (max-width: 500px) {
-    .grid {
+    .project-grid {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
     }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
-    .grid {
-      -ms-grid-columns: 1fr 1fr;
+    .project-grid {
+      -ms-grid-columns: 1fr 10px 1fr;
       grid-template-columns: 1fr 1fr;
     }
 }
 @media all and (max-width: 750px) {
-    .grid {
+    .project-grid {
       grid-gap: 10px;
     }
     h1 {
